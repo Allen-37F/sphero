@@ -9,6 +9,10 @@ orb.connect(function() {
   // orb2.color('red');
 });
 
+router.get('/', function (req, res, next) {
+  res.status(200).send('success');
+})
+
 router.get('/:color', function (req, res, next) {
   var newColor = req.params.color;
   orb.color(newColor);
